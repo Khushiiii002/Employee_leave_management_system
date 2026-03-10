@@ -1,0 +1,27 @@
+.approval-container {
+    padding: 20px;
+}
+
+.requests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.request-card {
+    &.pending {
+        border-left: 5px solid orange;
+    }
+}
+
+.status-badge {
+    font-weight: bold;
+
+    &.approved {
+        color: green;
+    }
+
+    &.rejected {
+        color: red;
+    }
+}

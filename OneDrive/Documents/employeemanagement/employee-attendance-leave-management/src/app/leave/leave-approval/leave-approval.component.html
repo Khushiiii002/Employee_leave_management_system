@@ -1,0 +1,23 @@
+<div class="approval-container">
+    <h1 class="mat-h1">Leave Approvals</h1>
+
+    <div class="requests-grid">
+        <mat-card *ngFor="let request of leaveRequests" class="request-card"
+            [class.pending]="request.status === 'Pending'">
+            <mat-card-header>
+                <mat-card-title>Employee #{{request.employeeId}}</mat-card-title>
+                <mat-card-subtitle>{{request.startDate | date}} - {{request.endDate | date}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p><strong>Reason:</strong> {{request.reason}}</p>
+                <p><strong>Status:</strong> <span [class.status-badge]="true"
+                        [class.approved]="request.status==='Approved'"
+                        [class.rejected]="request.status==='Rejected'">{{request.status}}</span></p>
+            </mat-card-content>
+            <mat-card-actions align="end" *ngIf="request.status === 'Pending'">
+                <button mat-button color="warn" (click)="reject(request.id)">Reject</button>
+                <button mat-raised-button color="primary" (click)="approve(request.id)">Approve</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

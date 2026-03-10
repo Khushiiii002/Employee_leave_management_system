@@ -1,0 +1,24 @@
+.leave-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.leave-card {
+    width: 100%;
+    max-width: 600px;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.date-row {
+    display: flex;
+    gap: 20px;
+
+    .half-width {
+        flex: 1;
+    }
+}

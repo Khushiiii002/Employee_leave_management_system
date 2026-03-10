@@ -1,0 +1,22 @@
+.sidenav-container {
+  height: calc(100vh - 64px);
+}
+
+.main-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.active-link {
+  background: rgba(0, 0, 0, 0.04);
+  color: #3f51b5;
+}
